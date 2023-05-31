@@ -88,6 +88,7 @@ get_date_breaks <- function(dates, threshold = 160) {
 #' @import dplyr
 #' @import ggplot2
 #' @importFrom dplyr filter
+#' @importFrom plotly ggplotly
 #' @export
 #'
 #' @examples
@@ -122,6 +123,9 @@ line_plot_data <- function(data, value, startdate = data$Date[1], title) {
   if (!missing(title))
     p <- p + labs(title = title)
   p
+  
+  pp <- p %>%
+    ggplotly(tooltip = c("x", "y"))
 }
 
 #' Barplot function
@@ -139,6 +143,7 @@ line_plot_data <- function(data, value, startdate = data$Date[1], title) {
 #' @import dplyr
 #' @import ggplot2
 #' @importFrom dplyr filter
+#' @importFrom plotly ggplotly
 #' @export
 #'
 #' @examples
@@ -182,5 +187,8 @@ bar_plot_data <- function(data, value, startdate = data$Date[1], rollm = FALSE, 
   if (!missing(title))
     p <- p + labs(title = title)
   p
+  
+  pp <- p %>%
+    ggplotly(tooltip = c("x", "y"))
 }
 
