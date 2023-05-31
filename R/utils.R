@@ -9,6 +9,7 @@
 #'
 #' @import dplyr
 #' @importFrom utils read.csv
+#' @importFrom stats setNames
 #' @export
 #'
 #' @examples
