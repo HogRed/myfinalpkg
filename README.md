@@ -1,6 +1,13 @@
 # myfinalpkg documentation
   
-The goal of **myfinalpkg** is to illustrate building a package during the IntroR4 workshop.
+The goal of **myfinalpkg** is to illustrate building a package during the IntroR4 & IntroR5 workshop.
+
+### Installation
+```r
+require(devtools)
+install_github("https://github.com/HogRed/myfinalpkg")
+
+```
 
 ### Description
 
